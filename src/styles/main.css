@@ -166,6 +166,30 @@ a {
   color: var(--color-primary-dark);
 }
 
+/* Container */
+.content-section {
+  padding: var(--spacing-xlarge) 0;
+}
+
+.content-section--light {
+  background-color: var(--color-gray-light);
+}
+
+.content-section--white {
+  background-color: var(--color-white);
+}
+
+.content-section--dark {
+  background-color: var(--color-tertiary);
+  color: var(--color-text-on-dark);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-large);
+}
+
 /* ===== HEADER ===== */
 .header {
   padding: var(--spacing-large);
@@ -175,6 +199,7 @@ a {
 .header__container {
   max-width: var(--container-width);
   margin: 0 auto;
+  padding: 0 var(--spacing-large);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-large);
@@ -218,16 +243,6 @@ a {
 }
 
 /* ===== SOBRE MIM ===== */
-.about {
-  padding: var(--spacing-large);
-  background-color: var(--color-white);
-}
-
-.about__container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-
 .about__content {
   display: flex;
   flex-direction: column;
@@ -270,16 +285,6 @@ a {
 }
 
 /* ===== HABILIDADES ===== */
-.skills {
-  padding: var(--spacing-xlarge) var(--spacing-large);
-  background-color: var(--color-gray-light);
-}
-
-.skills__container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-
 .skills__content {
   display: grid;
   grid-template-columns: 1fr;
@@ -321,17 +326,7 @@ a {
 }
 
 /* ===== PROJETOS ===== */
-.projects {
-  padding: var(--spacing-xlarge) var(--spacing-large);
-  background-color: var(--color-white);
-}
-
-.projects__container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-
-.projects__grid {
+.projects__content {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-large);
@@ -408,16 +403,6 @@ a {
 }
 
 /* ===== CURIOSIDADES ===== */
-.curiosities {
-  padding: var(--spacing-xlarge) var(--spacing-large);
-  background-color: var(--color-gray-light);
-}
-
-.curiosities__container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-
 .curiosities__content {
   display: flex;
   flex-direction: column;
@@ -470,16 +455,8 @@ a {
 }
 
 /* ===== FOOTER ===== */
-.footer {
-  background-color: var(--color-tertiary);
-  padding: var(--spacing-xlarge) var(--spacing-large);
-  color: var(--color-text-on-dark);
+.footer__content {
   text-align: center;
-}
-
-.footer__container {
-  max-width: var(--container-width);
-  margin: 0 auto;
 }
 
 .footer__link {
@@ -546,7 +523,7 @@ a {
   }
 
   /* Projects section */
-  .projects__grid {
+  .projects__content {
     grid-template-columns: repeat(2, 1fr);
   }
 
