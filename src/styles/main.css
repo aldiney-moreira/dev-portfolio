@@ -500,7 +500,7 @@ a {
   /* About section */
   .about__content {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .about__text {
@@ -514,7 +514,7 @@ a {
 
   /* Skills section */
   .skills__content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* Projects section */
@@ -560,17 +560,7 @@ a {
     height: 80px;
   }
 
-  /* About section */
-  .about__content {
-    align-items: center;
-  }
-
   .about__highlights {
     grid-template-columns: 1fr;
-  }
-
-  /* Skills section */
-  .skills__content {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
