@@ -427,6 +427,113 @@ body {
   background-color: var(--color-text-light);
 }
 
+/* ===== CURIOSIDADES ===== */
+.curiosities {
+  padding: var(--spacing-xlarge) var(--spacing-large);
+  background-color: var(--color-bg-header);
+}
+
+.curiosities__container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.curiosities__title {
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xlarge);
+  text-align: center;
+  position: relative;
+  line-height: var(--line-height-heading);
+}
+
+.curiosities__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-medium) auto 0;
+  border-radius: var(--radius-small);
+}
+
+.curiosities__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.curiosities__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+}
+
+.curiosity-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-large);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform var(--transition-normal);
+}
+
+.curiosity-card:hover {
+  transform: translateY(-3px);
+}
+
+.curiosity-card__icon {
+  font-size: var(--font-size-xxxl);
+  display: block;
+  margin-bottom: var(--spacing-small);
+}
+
+.curiosity-card__title {
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-small);
+  line-height: var(--line-height-heading);
+}
+
+.curiosity-card__description {
+  color: var(--color-text-light);
+  line-height: var(--line-height-text);
+}
+
+.curiosities__social {
+  text-align: center;
+  margin-top: var(--spacing-large);
+}
+
+.curiosities__social-title {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-medium);
+}
+
+.curiosities__social-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  list-style: none;
+}
+
+.curiosities__social-item {
+  display: inline-block;
+}
+
+.curiosities__social-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.curiosities__social-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   /* Header */
   .header {
@@ -484,6 +591,15 @@ body {
   /* Projects section */
   .projects__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Curiosities section */
+  .curiosities__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .curiosities__content {
+    gap: var(--spacing-xlarge);
   }
 }
 
