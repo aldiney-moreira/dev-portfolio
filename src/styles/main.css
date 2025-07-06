@@ -6,12 +6,52 @@
   --color-text-light: #7f8c8d;
   --color-bg-header: #f8f9fa;
   --color-white: #ffffff;
+  --color-card-bg: #f9f9f9;
+  --color-border: #e0e0e0;
 
   /* Espaçamentos */
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 1.5rem;
   --spacing-xlarge: 3rem;
+  --spacing-xxlarge: 4rem;
+
+  /* Tamanhos de containers */
+  --container-width: 1250px;
+  --container-narrow: 800px;
+
+  /* Border radius */
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+  --radius-circle: 50%;
+
+  /* Box shadow */
+  --shadow-small: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-large: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  /* Font sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 2.25rem;
+  --font-size-xxxxl: 2.5rem;
+
+  /* Line heights */
+  --line-height-normal: 1;
+  --line-height-text: 1.6;
+  --line-height-heading: 1.3;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
 
   /* Breakpoints */
   --breakpoint-mobile: 360px;
@@ -27,8 +67,9 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  line-height: var(--line-height-text);
   color: var(--color-text);
+  font-size: var(--font-size-base);
 }
 
 /* ===== HEADER ===== */
@@ -48,11 +89,12 @@ body {
 }
 
 .header__title {
-  font-size: 2rem;
+  font-size: var(--font-size-xxl);
   color: var(--color-text);
   text-align: center;
   white-space: nowrap;
   user-select: none;
+  line-height: var(--line-height-heading);
 }
 
 .nav {
@@ -75,7 +117,7 @@ body {
   color: var(--color-primary);
   font-weight: 500;
   display: block;
-  transition: color 0.3s ease;
+  transition: color var(--transition-normal);
 }
 
 .nav__link:hover {
@@ -92,7 +134,7 @@ body {
 .header__image {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   object-fit: cover;
   border: 2.5px solid var(--color-primary);
 }
@@ -109,16 +151,17 @@ body {
 }
 
 .about__container {
-  max-width: 1050px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
 .about__title {
-  font-size: 2rem;
+  font-size: var(--font-size-xxl);
   color: var(--color-primary);
   margin-bottom: var(--spacing-large);
   text-align: center;
   position: relative;
+  line-height: var(--line-height-heading);
 }
 
 .about__title::after {
@@ -128,7 +171,7 @@ body {
   height: 4px;
   background-color: var(--color-primary);
   margin: var(--spacing-medium) auto 0;
-  border-radius: 2px;
+  border-radius: var(--radius-small);
 }
 
 .about__content {
@@ -138,8 +181,8 @@ body {
 }
 
 .about__text {
-  line-height: 1.8;
-  font-size: 1.1rem;
+  line-height: var(--line-height-text);
+  font-size: var(--font-size-md);
 }
 
 .about__description {
@@ -153,10 +196,10 @@ body {
 }
 
 .highlight-card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
   border-left: 3px solid var(--color-primary);
 }
 
@@ -168,19 +211,95 @@ body {
 }
 
 .highlight-card__icon {
-  font-size: 1.8rem;
-  line-height: 1;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-normal);
 }
 
 .highlight-card__title {
   color: var(--color-primary-dark);
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   margin: 0;
+  line-height: var(--line-height-heading);
 }
 
 .highlight-card__description {
   color: var(--color-text-light);
-  line-height: 1.6;
+  line-height: var(--line-height-text);
+}
+
+/* ===== HABILIDADES ===== */
+.skills {
+  padding: var(--spacing-xlarge) var(--spacing-large);
+  background-color: var(--color-bg-header);
+}
+
+.skills__container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.skills__title {
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xlarge);
+  text-align: center;
+  position: relative;
+  line-height: var(--line-height-heading);
+}
+
+.skills__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-medium) auto 0;
+  border-radius: var(--radius-small);
+}
+
+.skills__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-large);
+}
+
+.skills__category {
+  background-color: var(--color-white);
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-large);
+  box-shadow: var(--shadow-card);
+}
+
+.skills__category-title {
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+  line-height: var(--line-height-heading);
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--spacing-medium);
+  list-style: none;
+}
+
+.skills__item {
+  background-color: var(--color-card-bg);
+  color: var(--color-text-light);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-small);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  box-shadow: var(--shadow-small);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.skills__item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
 }
 
 @media (min-width: 768px) {
@@ -229,7 +348,12 @@ body {
   }
 
   .about__title {
-    font-size: 2.25rem;
+    font-size: var(--font-size-xxxl);
+  }
+
+  /* Skills section */
+  .skills__content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -266,6 +390,11 @@ body {
   }
 
   .about__title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-xxxxl);
+  }
+
+  /* Skills section */
+  .skills__content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
