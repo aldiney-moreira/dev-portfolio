@@ -23,4 +23,8 @@ Landing page desenvolvida como trabalho acadêmico utilizando HTML e CSS puros, 
 - Design responsivo (mobile-first)
 - Media queries
 
+## Pré-visualização
+
+<img src="https://github.com/user-attachments/assets/7174103f-49a1-41f5-9f87-43bba0579871" alt="Versão Desktop" width="100%">
+
 Desenvolvido por Aldiney Moreira | UniCesumar © 2025
