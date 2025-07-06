@@ -1,6 +1,6 @@
 # Landing Page Pessoal - Projeto de Faculdade
 
-Landing page desenvolvida como trabalho acadêmico utilizando HTML e CSS puros, seguindo princípios de semântica e responsividade.
+Landing page desenvolvida como trabalho acadêmico utilizando HTML e CSS puros, seguindo princípios de semântica e responsividade. O projeto está hospedado no GitHub Pages e pode ser acessado através do link: [Portfólio Dev](https://aldiney-moreira.github.io/dev-portfolio/).
 
 **Tecnologias**  
 - HTML5 
