@@ -1,0 +1,26 @@
+# Landing Page Pessoal - Projeto de Faculdade
+
+Landing page desenvolvida como trabalho acadêmico utilizando HTML e CSS puros, seguindo princípios de semântica e responsividade.
+
+**Tecnologias**  
+- HTML5 
+- CSS3 
+
+**Estrutura do Projeto**  
+1. Cabeçalho com dados pessoais
+2. Menu de navegação interno
+3. Seção "Sobre mim"
+4. Seção "Habilidades"
+5. Seção "Projetos"
+6. Área com informações extras
+7. Rodapé com contatos
+
+**Boas Práticas**  
+- Variáveis CSS
+- Classes reutilizáveis
+- Nomenclatura BEM
+- Tags semânticas
+- Design responsivo (mobile-first)
+- Media queries
+
+Desenvolvido por Aldiney Moreira | UniCesumar © 2025
