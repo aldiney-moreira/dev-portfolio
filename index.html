@@ -124,17 +124,36 @@
       </div>
     </section>
 
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <article>
-        <h3>Projeto 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-      </article>
+    <section id="projetos" class="projects">
+      <div class="projects__container">
+        <h2 class="projects__title">Projetos</h2>
 
-      <article>
-        <h3>Projeto 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-      </article>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Loopstudios</h3>
+              <span class="project-card__status project-card__status--completed">Completo</span>
+            </div>
+            <p class="project-card__description">Landing page moderna para empresa de realidade virtual, desenvolvida com React como solução para desafio do Frontend Mentor.</p>
+            <div class="project-card__links">
+              <a href="https://github.com/aldiney-moreira/loopstudios" target="_blank" class="project-card__link">Ver código</a>
+              <a href="https://aldiney-moreira.github.io/loopstudios/" target="_blank" class="project-card__link">Ver demo</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--in-progress">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Easybank</h3>
+              <span class="project-card__status project-card__status--in-progress">Em desenvolvimento</span>
+            </div>
+            <p class="project-card__description">Landing page para banco digital, desenvolvida com Angular como solução para desafio do Frontend Mentor. (Atualmente em implementação)</p>
+            <div class="project-card__links">
+              <a href="https://github.com/aldiney-moreira/easybank" target="_blank" class="project-card__link">Ver código</a>
+              <a href="#" target="_blank" class="project-card__link project-card__link--disabled">Demo em breve</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <aside id="extras">
