@@ -31,6 +31,7 @@ body {
   color: var(--color-text);
 }
 
+/* ===== HEADER ===== */
 .header {
   padding: var(--spacing-large);
   background-color: var(--color-bg-header);
@@ -101,7 +102,89 @@ body {
   color: var(--color-text-light);
 }
 
+/* ===== SOBRE MIM ===== */
+.about {
+  padding: var(--spacing-large);
+  background-color: var(--color-white);
+}
+
+.about__container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-large);
+  text-align: center;
+  position: relative;
+}
+
+.about__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-medium) auto 0;
+  border-radius: 2px;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.about__text {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.about__description {
+  margin-bottom: var(--spacing-medium);
+}
+
+.about__highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+}
+
+.highlight-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: var(--spacing-medium);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 3px solid var(--color-primary);
+}
+
+.highlight-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+}
+
+.highlight-card__icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.highlight-card__title {
+  color: var(--color-primary-dark);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.highlight-card__description {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
 @media (min-width: 768px) {
+  /* Header */
   .header {
     flex-direction: row;
     flex-wrap: wrap;
@@ -128,9 +211,30 @@ body {
     align-items: center;
     width: 100%;
   }
+
+  /* About section */
+  .about__content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about__text {
+    flex: 1;
+    padding-right: var(--spacing-large);
+  }
+
+  .about__highlights {
+    flex: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .about__title {
+    font-size: 2.25rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  /* Header */
   .header {
     flex-wrap: nowrap;
   }
@@ -150,5 +254,18 @@ body {
   .header__image {
     width: 80px;
     height: 80px;
+  }
+
+  /* About section */
+  .about__content {
+    align-items: center;
+  }
+
+  .about__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about__title {
+    font-size: 2.5rem;
   }
 }
